@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    x:Class="SearchPage.Views.ItemsPage"
+    Title="{Binding Title}"
+    x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Text="Add"
+            Clicked="AddItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <Shell.TitleView>
+        <!--#region Search Bar-->
+        <StackLayout
+            BackgroundColor="Transparent"
+            HorizontalOptions="FillAndExpand"
+            Orientation="Horizontal"
+            VerticalOptions="FillAndExpand">
+            <Frame
+                Margin="7,7,20,7"
+                Padding="5"
+                BackgroundColor="#0A000000"
+                CornerRadius="4"
+                HasShadow="False"
+                HorizontalOptions="FillAndExpand"
+                IsClippedToBounds="True"
+                VerticalOptions="FillAndExpand">
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    Orientation="Horizontal">
+
+                    <SearchBar
+                        Margin="-5"
+                        Text="{Binding SearchKeyword}"
+                        SearchCommand="{Binding SearchCommand}"
+                        BackgroundColor="Transparent"
+                        FontSize="Medium"
+                        HorizontalOptions="FillAndExpand"
+                        Placeholder="Enter Search Keyword..."
+                        PlaceholderColor="White"
+                        TextColor="White" />
+
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <!--#endregion-->
+    </Shell.TitleView>
+
+    <StackLayout
+        Spacing="10">
+
+        <!--#region Tab Button-->
+        <Grid
+            HorizontalOptions="Center">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="40" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button
+                Grid.Column="0"
+                Text="Tab 1"
+                Command="{Binding Tab1Command}" />
+            <Button
+                Grid.Column="1"
+                Text="Tab 2"
+                Command="{Binding Tab2Command}" />
+        </Grid>
+        <!--#endregion-->
+
+        <!--#region First Tab List-->
+        <ListView
+            x:Name="ItemsListView"
+            IsVisible="{Binding IsTab1}"
+            ItemsSource="{Binding Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="true"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement"
+            ItemSelected="OnItemSelected">
+            <d:ListView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+                    <x:String>Third Item</x:String>
+                    <x:String>Fourth Item</x:String>
+                    <x:String>Fifth Item</x:String>
+                    <x:String>Sixth Item</x:String>
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Padding="10">
+                            <Label
+                                Text="{Binding Text}"
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                FontSize="16" />
+                            <Label
+                                Text="{Binding Description}"
+                                d:Text="Item description"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--#endregion-->
+
+        <!--#region  Second Tab List-->
+        <ListView
+            x:Name="ItemsList2View"
+            IsVisible="{Binding IsTab2}"
+            ItemsSource="{Binding Tab2Items}"
+            VerticalOptions="FillAndExpand"
+            HasUnevenRows="true"
+            RefreshCommand="{Binding LoadItemsCommand}"
+            IsPullToRefreshEnabled="true"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            CachingStrategy="RecycleElement"
+            ItemSelected="OnItemSelected">
+            <d:ListView.ItemsSource>
+                <x:Array
+                    Type="{x:Type x:String}">
+                    <x:String>First Item</x:String>
+                    <x:String>Second Item</x:String>
+
+                </x:Array>
+            </d:ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout
+                            Padding="10">
+                            <Label
+                                Text="{Binding Text}"
+                                d:Text="{Binding .}"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemTextStyle}"
+                                FontSize="16" />
+                            <Label
+                                Text="{Binding Description}"
+                                d:Text="Item description"
+                                LineBreakMode="NoWrap"
+                                Style="{DynamicResource ListItemDetailTextStyle}"
+                                FontSize="13" />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <!--#endregion-->
+
+    </StackLayout>
+
+</ContentPage>

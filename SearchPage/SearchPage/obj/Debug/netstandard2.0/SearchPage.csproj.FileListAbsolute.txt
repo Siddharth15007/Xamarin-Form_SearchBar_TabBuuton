@@ -1,0 +1,17 @@
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\bin\Debug\netstandard2.0\SearchPage.deps.json
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\bin\Debug\netstandard2.0\SearchPage.dll
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\bin\Debug\netstandard2.0\ref\SearchPage.dll
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\bin\Debug\netstandard2.0\SearchPage.pdb
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\App.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\SearchPage.AssemblyInfoInputs.cache
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\SearchPage.AssemblyInfo.cs
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\XamlC.stamp
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\SearchPage.dll
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\ref\SearchPage.dll
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\SearchPage.pdb
+G:\Youtube Content\Xamarin\SearchPage\SearchPage\SearchPage\obj\Debug\netstandard2.0\SearchPage.csprojAssemblyReference.cache
